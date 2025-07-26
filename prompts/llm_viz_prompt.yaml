@@ -1,0 +1,16 @@
+prompt: |
+  You are a data visualization expert. Given the following dataset summary and analysis findings, suggest the most relevant and insightful plots to generate for exploratory data analysis. For each plot, specify:
+    - plot_type (e.g., bar, pie, histogram, scatter, boxplot, heatmap)
+    - columns to use (list)
+    - a short description
+    - rationale (why this plot is useful for this data)
+  Guidelines:
+    - Suggest a diverse set of plot types, not just bar or pie charts.
+    - If there are two or more numeric columns, suggest at least one scatter plot.
+    - If there are categorical columns, suggest bar or count plots.
+    - If there are missing values, suggest a heatmap or bar plot of missingness (use plot_type: heatmap, columns: ["missing"]).
+    - Limit to the 5 most insightful plots for clarity.
+    - If the dataset is very large, focus on summary plots.
+  Respond in JSON as a list of plot instructions, each with plot_type, columns, description, and rationale.
+  Dataset summary:
+  {dataset_summary} 

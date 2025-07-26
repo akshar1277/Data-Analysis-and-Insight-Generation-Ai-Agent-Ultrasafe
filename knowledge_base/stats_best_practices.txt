@@ -1,0 +1,43 @@
+# Statistical Analysis Best Practices Knowledge Base
+
+## Statistical Test Selection Criteria
+
+### Primary Decision Factors
+- Research question type: comparison, relationship, or description
+- Number of variables: univariate, bivariate, or multivariate
+- Data type: categorical (nominal/ordinal) or continuous (interval/ratio)
+- Sample size: large (n>30) or small (n<30)
+- Data distribution: normal vs non-normal
+- Study design: independent groups, paired/matched groups, or repeated measures
+
+### Test Selection Framework
+**For Comparing Groups:**
+- Two independent groups, continuous data, normal distribution: Independent t-test
+- Two independent groups, continuous data, non-normal: Mann-Whitney U test
+- Two paired groups, continuous data, normal distribution: Paired t-test
+- Two paired groups, continuous data, non-normal: Wilcoxon signed-rank test
+- Multiple independent groups, continuous data, normal: One-way ANOVA
+- Multiple independent groups, continuous data, non-normal: Kruskal-Wallis test
+- Two categorical variables: Chi-square test of independence
+- Small expected frequencies (<5): Fisher's exact test
+
+**For Relationships:**
+- Two continuous variables, linear relationship: Pearson correlation
+- Two continuous variables, non-linear/non-normal: Spearman correlation
+- Prediction with continuous outcome: Linear regression
+- Prediction with binary outcome: Logistic regression
+- Multiple predictors: Multiple regression
+
+## Statistical Assumptions and Validation
+
+### Common Statistical Assumptions
+**Normality Assumption:**
+- Required for: t-tests, ANOVA, linear regression, Pearson correlation
+- Test methods: Shapiro-Wilk test (n<50), Kolmogorov-Smirnov test, Q-Q plots
+- Visual check: Histogram should show bell curve, Q-Q plot points should follow diagonal line
+- Acceptance criteria: Shapiro-Wilk p>0.05, skewness within ±2, kurtosis within ±7
+
+**Homogeneity of Variance:**
+- Required for: Independent t-test, ANOVA
+- Test method: Levene's test
+- Acceptance criteria: p>0.05

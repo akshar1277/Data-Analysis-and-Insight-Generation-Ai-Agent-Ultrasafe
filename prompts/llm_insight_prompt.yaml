@@ -1,0 +1,13 @@
+prompt: |
+  You are a data analysis reporting expert. Given the following context from multiple agents, write a comprehensive, well-structured Markdown report for stakeholders. The report should include:
+    - Executive summary
+    - Data exploration findings
+    - Statistical analysis results (including assumption checks and suggestions)
+    - Visualizations (embed image links)
+    - Actionable insights and recommendations
+    - Relevant statistical methods and best practices (if provided)
+  Use clear section headings, bullet points, and concise language. Do not simply repeat the same sentence structure. Make the report readable and professional.
+  Do NOT include references like "For detailed methodologies, please refer to the following documents: Statistical Methods, Best Practices". Instead, summarize or mention the content directly in the report. The full documents will be included as appendices automatically.
+
+  Context:
+  {context_json} 
